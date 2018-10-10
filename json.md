@@ -82,7 +82,7 @@ Flutter中基本的JSON序列化非常简单。Flutter有一个内置`dart:conve
 
 <!-- skip -->
 ```dart
-Map<String, dynamic> user = JSON.decode(json);
+Map<String, dynamic> user = json.decode(json);
 
 print('Howdy, ${user['name']}!');
 print('We sent the verification link to ${user['email']}.');
@@ -132,7 +132,7 @@ class User {
 
 <!-- skip -->
 ```dart
-Map userMap = JSON.decode(json);
+Map userMap = json.decode(json);
 var user = new User.fromJson(userMap);
 
 print('Howdy, ${user.name}!');
@@ -143,7 +143,7 @@ print('We sent the verification link to ${user.email}.');
 
 <!-- skip -->
 ```dart
-String json = JSON.encode(user);
+String json = json.encode(user);
 ```
 
 这样，调用代码就不用担心JSON序列化了。但是，model类还是必须的。在生产应用程序中，我们希望确保序列化正常工作。在实践中，`User.fromJson`和`User.toJson`方法都需要单元测试到位，以验证正确的行为。
